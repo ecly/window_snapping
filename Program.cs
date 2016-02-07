@@ -12,21 +12,24 @@ namespace Snapping
     {
         static void Main(string[] args)
         {
-            //IntPtr test = new IntPtr(); When reading values
+            //Test values for retrieval
+            //IntPtr test = new IntPtr();
             //StringBuilder builder = new StringBuilder();
 
             SystemParametersInfo(0x0091, 0, IntPtr.Zero, 0x001A);
+            SystemParametersInfo(0x008F, 0, IntPtr.Zero, 0x001A);
 
+            //Debug.WriteLine(builder.ToString());
             //0x0083 complete snapping
             //0x0090 get dock moving
             //0x0091 set dock moving
             //0x008F set snap sizing
+
+            //Discovering their purpose
             //SPI_GETMOUSESIDEMOVETHRESHOLD = 0x0088,
             //SPI_SETMOUSESIDEMOVETHRESHOLD = 0x0089,
             //SPI_GETMOUSEDRAGOUTTHRESHOLD = 0x0084,
             //SPI_GETMOUSEDOCKTHRESHOLD = 0x007E,
-
-            //Full list of values found here:
             //https://msdn.microsoft.com/en-us/library/windows/desktop/ms724947(v=vs.85).aspx
         }
 
